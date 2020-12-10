@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modulo de edicion</title>
+	{% block styles %}
+	<link rel="stylesheet" href="{{url_for('.static' , filename = 'materialize.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('.static' , filename = 'fontawesome/css/all.min.css')}}">
+	{% endblock %}
+</head>
+<body>
+<div class="container">
+
+	<h2 class="blue-text text-darken-4 center">Editar un router <i class="fas fa-edit"></i></h2>
+	<form action ="/EditRouter" id="edit" method="post">
+<div class="row">
+	<div class="col s6">
+	<i class="fas fa-tv fa-2x prefix"></i>
+	<label for="hostname">Hostname: </label>
+	<input id="hostname" type="text" name="hostname"/>
+		
+		
+	</div>
+	<div class="col s6">
+	<i class="fas fa-wifi fa-2x prefix"></i>
+	 <label for="id">IP mas alta (id) : </label>
+	 <input type="text" id="id" name="id"/>
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col s6">
+	<i class="fas fa-laptop-code fa-2x prefix"></i>
+	<label for="marca">Marca : </label>
+        <input type="text" id="marca" name="marca"/>
+		
+	</div>
+	<div class="col s6">
+	<i class="fas fa-laptop fa-2x prefix"></i>
+	 <label for="so">Sistema operativo: </label>
+		<input type="text" id="so" name="so"/>	
+	</div>
+</div>
+
+<div class="row">
+	<div class="col s6">
+	<i class="fas fa-network-wired fa-2x prefix"></i>
+	<label for="inter">num interfaces: </label>
+	<input type="text" id="inter" name="inter"/><br>
+	</div>
+	<div class="col s6">
+	<input type="submit" id="send-signup" name="signup" value="Aceptar" />
+		
+	</div>
+</div>
+	
+		
+		
+		
+		
+		
+		
+	</form>
+	
+	
+<h2 class="blue-text text-darken-4 center">Nuevo usuario <i class="fas fa-users"></i></h2>
+
+		<form action ="/CrearUser" id="nUser" method="post">
+
+	<div class="row">
+	<div class="col s6">
+	<i class="fas fa-tv fa-2x prefix"></i>
+	<label for="hostname">Hostname: </label>
+	<input type="text" id="hostname" name="hostname" required />
+	</div>
+	<div class="col s6">
+	<i class="fas fa-user fa-2x prefix"></i>
+	<label for="newUser">Usuario : </label>
+	<input type="text" id="newUser" name="newUser" required/>	
+	</div>
+        </div>
+	
+	
+	
+<div class="row">
+	<div class="col s6">
+	<i class="fas fa-key fa-2x prefix"></i>
+	<label for="pass">password : </label>
+	<input type="text" id="pass" name="pass" required/>
+	</div>
+	<div class="col s6">
+	<input type="submit" id="ok" name="ok" value="Crear" />
+		
+	</div>
+</div>
+	
+
+
+		
+</form>
+
+</div>
+</body>
+</html>

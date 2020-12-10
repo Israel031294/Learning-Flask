@@ -1,0 +1,37 @@
+graph red {
+	"linux mint" [label="MV
+148.204.56.1" fillcolor=lightblue shape=cylinder style=filled]
+	switch [color=mediumblue fillcolor=white shape=circle style=filled]
+	"linux mint" -- switch
+	R1 [label="R1
+FastEthernet1/0 8.8.8.12 8.8.8.13 255.255.255.252 
+FastEthernet1/1 8.8.8.16 8.8.8.17 255.255.255.252 
+FastEthernet0/0 148.204.56.0 148.204.56.1 255.255.255.0 
+" fillcolor=lightblue shape=cylinder style=filled]
+	R2 [label="R2
+FastEthernet1/1 8.8.8.8 8.8.8.9 255.255.255.252 
+FastEthernet1/0 8.8.8.12 8.8.8.14 255.255.255.252 
+" fillcolor=lightblue shape=cylinder style=filled]
+	R3 [label="R3
+FastEthernet1/0 8.8.8.8 8.8.8.10 255.255.255.252 
+FastEthernet0/0 8.8.8.16 8.8.8.18 255.255.255.252 
+" fillcolor=lightblue shape=cylinder style=filled]
+	R4 [label="R4
+FastEthernet1/1 8.8.8.0 8.8.8.1 255.255.255.252 
+FastEthernet1/0 8.8.8.4 8.8.8.5 255.255.255.252 
+FastEthernet0/0 148.204.56.0 148.204.56.2 255.255.255.0 
+" fillcolor=lightblue shape=cylinder style=filled]
+	R5 [label="R5
+FastEthernet0/0 8.8.8.4 8.8.8.6 255.255.255.252 
+" fillcolor=lightblue shape=cylinder style=filled]
+	R6 [label="R6
+FastEthernet1/0 8.8.8.0 8.8.8.2 255.255.255.252 
+" fillcolor=lightblue shape=cylinder style=filled]
+	R1 -- R2 [label="8.8.8.12"]
+	R1 -- R3 [label="8.8.8.16"]
+	switch -- R1 [label="148.204.56.0"]
+	switch -- R4 [label="148.204.56.0"]
+	R2 -- R3 [label="8.8.8.8"]
+	R4 -- R6 [label="8.8.8.0"]
+	R4 -- R5 [label="8.8.8.4"]
+}
